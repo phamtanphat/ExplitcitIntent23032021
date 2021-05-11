@@ -1,0 +1,29 @@
+package com.example.explitcitintent23032021;
+
+import java.io.Serializable;
+
+public class Animal implements Serializable {
+    private double height;
+    private double weight;
+
+    public Animal(double height, double weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+}
