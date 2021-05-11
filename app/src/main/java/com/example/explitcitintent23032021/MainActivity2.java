@@ -14,8 +14,13 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         // 1 : Nhận dữ liệu dạng string
+//        Intent intent = getIntent();
+//        String chuoi = intent.getStringExtra("string");
+//        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
+
+        // 2 : Nhận dữ liệu dạng array
         Intent intent = getIntent();
-        String chuoi = intent.getStringExtra("string");
-        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
+        int[] arrNumbers = intent.getIntArrayExtra("array");
+        Toast.makeText(this, arrNumbers.length + "", Toast.LENGTH_SHORT).show();
     }
 }
