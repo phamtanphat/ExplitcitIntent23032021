@@ -19,8 +19,13 @@ public class MainActivity2 extends AppCompatActivity {
 //        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
 
         // 2 : Nhận dữ liệu dạng array
+//        Intent intent = getIntent();
+//        int[] arrNumbers = intent.getIntArrayExtra("array");
+//        Toast.makeText(this, arrNumbers.length + "", Toast.LENGTH_SHORT).show();
+
+        // 3 : Nhận dữ liệu dạng object
         Intent intent = getIntent();
-        int[] arrNumbers = intent.getIntArrayExtra("array");
-        Toast.makeText(this, arrNumbers.length + "", Toast.LENGTH_SHORT).show();
+        Food food = intent.getParcelableExtra("food");
+        Toast.makeText(this, food.getName() + "", Toast.LENGTH_SHORT).show();
     }
 }

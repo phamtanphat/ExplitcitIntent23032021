@@ -4,12 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mBtnString,mBtnArray;
+    Button mBtnString,mBtnArray,mBtnParcelableFood,mBtnSerializableAnimal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
         mBtnString = findViewById(R.id.buttonString);
         mBtnArray = findViewById(R.id.buttonArray);
+        mBtnParcelableFood = findViewById(R.id.buttonParcelableFood);
+        mBtnSerializableAnimal = findViewById(R.id.buttonSerializableAnimal);
 
         mBtnString.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,5 +38,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mBtnParcelableFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Food food = new Food("Sushi",30000);
+
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtra("food",food);
+                startActivity(intent);
+            }
+        });
+
+        mBtnSerializableAnimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 }

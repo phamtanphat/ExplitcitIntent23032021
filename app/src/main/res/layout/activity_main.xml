@@ -18,4 +18,14 @@
         android:text="Array"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/buttonParcelableFood"
+        android:text="Parcelable Food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/buttonSerializableAnimal"
+        android:text="Serializable Animal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
